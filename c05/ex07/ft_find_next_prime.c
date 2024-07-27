@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_prime.c                                      :+:      :+:    :+:   */
+/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juduchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/25 18:30:33 by juduchar          #+#    #+#             */
-/*   Updated: 2024/07/27 18:36:25 by juduchar         ###   ########.fr       */
+/*   Created: 2024/07/26 09:58:33 by juduchar          #+#    #+#             */
+/*   Updated: 2024/07/27 19:58:51 by juduchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,21 @@ int	ft_is_prime(int nb)
 	return (is_prime);
 }
 
+int	ft_find_next_prime(int nb)
+{
+	int	is_prime;
+	int	next_prime;
+
+	is_prime = ft_is_prime(nb);
+	if (is_prime)
+		return (nb);
+	next_prime = ft_find_next_prime(nb + 1);
+	return (next_prime);
+}
+
 /*
 int	main(void)
 {
-	printf("%d", ft_is_prime(5));
-}*/
+	printf("%d", ft_find_next_prime(50));
+}
+*/

@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_params.c                                  :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juduchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/25 11:51:21 by juduchar          #+#    #+#             */
-/*   Updated: 2024/07/25 12:13:22 by juduchar         ###   ########.fr       */
+/*   Created: 2024/07/26 09:12:52 by juduchar          #+#    #+#             */
+/*   Updated: 2024/07/27 18:21:36 by juduchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+//#include <stdio.h>
 
-int	main(int argc, char **argv)
+int	ft_sqrt(int nb)
 {
-	int		i;
+	int	i;
 
-	if (argc - 1 >= 1)
-	{
-		i = 1;
-		while (i < argc)
-		{
-			while (*argv[i] != '\0')
-			{
-				write(1, argv[i], 1);
-				argv[i]++;
-			}
-			write(1, "\n", 1);
-			i++;
-		}
-	}
+	if (nb < 1)
+		return (0);
+	i = 1;
+	while ((i * i) < nb && (i * i > 0))
+		i++;
+	if ((i * i) == nb)
+		return (i);
 	return (0);
 }
+
+/*
+int	main(void)
+{
+	printf("%d", ft_sqrt(100));
+}
+*/
