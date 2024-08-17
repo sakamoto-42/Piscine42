@@ -1,3 +1,5 @@
+Exos de la piscine corrigés et validés par la moulinette (sauf ceux indiqués)
+
 Shell 00 : 100%
 Shell 01 : 100%
 C 00 : 100%
