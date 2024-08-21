@@ -36,7 +36,6 @@ void	ft_rec_combn(int comb[9], int n, int pos, int prev)
 {
 	int	i;
 
-	i = 0;
 	if (pos == n)
 	{
 		ft_write_combn(comb, n);
